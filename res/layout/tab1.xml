@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <RelativeLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                        <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="CALIBRATE" />
+
+    <CheckBox
+        android:id="@+id/backwardBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginRight="23dp"
+        android:checked="false"
+        android:text="Jog Backward" />
+
+    <CheckBox
+        android:id="@+id/forwardBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:checked="true"
+        android:text="Jog Forward" />
+
+    <CheckBox
+        android:id="@+id/leftRightBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/backwardBox"
+        android:layout_alignBottom="@+id/backwardBox"
+        android:layout_alignParentLeft="true"
+        android:checked="false"
+        android:text="Jog Left/Right" />
+
+    <SeekBar
+        android:id="@+id/jogBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/backwardBox"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="23dp"
+        android:max="@integer/maxJog"
+        android:progress="@integer/defaultLean" />
+
+    <TextView
+        android:id="@+id/jogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/jogBar"
+        android:layout_alignLeft="@+id/leanLabel"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:paddingBottom="@dimen/v2"
+        android:paddingLeft="@dimen/p2"
+        android:text="Jog Sensitivity: 50%"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <SeekBar
+        android:id="@+id/leanBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/jogLabel"
+        android:layout_alignParentRight="true"
+        android:max="@integer/maxLean"
+        android:progress="@integer/defaultLean" />
+
+    <TextView
+        android:id="@+id/leanLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/leanBar"
+        android:layout_alignRight="@+id/leftRightBox"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:paddingBottom="@dimen/v1"
+        android:paddingLeft="@dimen/p2"
+        android:text="Lean Sensitivity: 51%"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/leanLabel"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/address" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignLeft="@+id/leanBar"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:paddingLeft="@dimen/p2"
+        android:text="IPAddress:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+          </RelativeLayout>

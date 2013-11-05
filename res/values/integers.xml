@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="Size">20</integer>
+    <integer name="maxLean">100</integer>
+    <integer name="maxJog">100</integer>
+    <integer name="defaultJog">50</integer>
+    <integer name="defaultLean">50</integer>
+    <integer name="maxValue">20</integer>
+    <integer name="defaultWalkCount">5</integer>
+    <integer name="maxSensitivity">100</integer>
+    <integer name="defaultJumpSensitivity">50</integer>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <RelativeLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+     <TextView
+         android:id="@+id/walkCountLabel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="73dp"
+         android:focusable="false"
+         android:focusableInTouchMode="false"
+         android:paddingBottom="@dimen/v2"
+         android:paddingLeft="@dimen/p2"
+         android:text="Walk Count:"
+         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+     <SeekBar
+         android:id="@+id/walkCountBar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/walkCountLabel"
+         android:max="@integer/maxValue"
+         android:progress="@integer/defaultWalkCount" />
+
+     <TextView
+         android:id="@+id/jumpSensitivityLabel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/walkCountBar"
+         android:focusable="false"
+         android:focusableInTouchMode="false"
+         android:paddingBottom="@dimen/v2"
+         android:paddingLeft="@dimen/p2"
+         android:text="Jump Sensitivity:"
+         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+     <SeekBar
+         android:id="@+id/jumpSensitivityBar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/jumpSensitivityLabel"
+         android:max="@integer/maxJog"
+         android:progress="@integer/defaultJumpSensitivity" />
+     
+          </RelativeLayout>
